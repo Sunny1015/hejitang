@@ -1,0 +1,81 @@
+html,body,.wrapper,.cutHairService,.hairColorWrapper{
+	font-size: 62.5%;;
+	height: 100%;
+	width: 100%
+}
+.wrapper{
+	font-size: 4.5rem;
+}
+.cutHairService{
+	height: 100%;
+	width: 100%;
+	margin-top: 10%;
+}
+.wrapper{
+	position: relative;
+}
+.cutHair{
+	position: absolute;
+	line-height: 16rem;
+    height: 8%;
+    background: #000;
+    width: 100%;
+    color: #fff;
+}
+.cutHair h2{
+	display: inline-block;
+	font-size: 4rem;
+    margin-left: 15%;
+    font-weight: normal;
+}
+.hairColorWrapper{
+	position: absolute;
+	background: rgba(0,0,0,.7); 
+	left: 0;
+	top: 8%;
+}
+.hairColorService{
+	width: 66%;
+    height: 30%;
+    background: #fff;
+    margin: 30% 12%;
+    border-radius: 1rem;
+    padding: 5%;
+}
+.hairDye h3,.hairColorService h3{
+	color: #999;
+}
+.hairDyeList,.hairColorList{
+	overflow: hidden;
+}
+.hairDyeList li,.hairColorList li{
+	    width: 20%;
+	    height: 4.5rem;
+	    line-height: 4.5rem;
+	    text-align: center;
+	    color: #000;
+	    margin: 1.5rem;
+	    margin-left: 5%;
+	    margin-right: 0rem;
+	    float: left;
+	    border-radius: 4.5rem;
+	    background: #eee;
+}
+.hairDyeList .current,.hairColorList .current{
+	color: #fff;
+	background: #a40000;
+}
+.btn{
+	color: #fff;
+    width: 35rem;
+    height: 5rem;
+    line-height: 5rem;
+    background: #a40000;
+    border: 0 none;
+    border-radius: 1rem;
+    margin: 15% 20% 0 20%;
+}
+.returnBtn{
+	margin-right: 3rem;
+	font-size: 3rem;
+}

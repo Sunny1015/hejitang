@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>美发服务</title>
+	<link rel="stylesheet" type="text/css" href="css/common.css">
+	<link rel="stylesheet" type="text/css" href="css/hairdye.css">
+</head>
+<body>
+	<div id="app">
+		<div class="wrapper">
+			<div class="hairStyle">
+				<span class="returnBtn"><返回</span>
+				<span class="returnBtn">关闭</span>
+				<h2>美发服务</h2>
+			</div>
+			
+			<ul>
+				<li v-for="(item,index) in serviceInfo" class="hairPictures">
+					<div class="servicesWrappper">
+						<div class="services">
+							<h3>{{item.serviceName}}</h3>
+							<div class="price">{{item.price}}</div>
+							<button  class="order" @click="getAppointment(index)">预约</button>
+						</div>
+					</div>
+				</li>
+			</ul>
+		</div>
+	</div>
+</body>
+</html>
+<script type="text/javascript" src="js/vue.min.js"></script>
+<script type="text/javascript">
+     new Vue({
+        el: '#app',
+        data: {
+            imgSrc: '',
+            serviceInfo:[
+            	{serviceName:'剪发服务',price:'￥100'},
+            	{serviceName:'美发服务',price:'￥100'},
+            	{serviceName:'剪发服务',price:'￥100'},
+            	{serviceName:'美发服务',price:'￥100'},
+            	{serviceName:'剪发服务',price:'￥100'},
+            ],
+        },
+        methods:{
+			getAppointment(index){
+				console.log(index)
+			}
+        },
+        mounted(){
+
+        }
+    })
+</script>

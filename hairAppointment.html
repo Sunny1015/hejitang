@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>美发预约</title>
+	<link rel="stylesheet" type="text/css" href="css/common.css">
+	<link rel="stylesheet" type="text/css" href="css/hairAppointment.css">
+</head>
+<body>
+	<div id="app">
+		<div class="wrapper">
+			<div class="hairStyle">
+				<span class="returnBtn"><返回</span>
+				<span class="returnBtn">关闭</span>
+				<h2>美发预约</h2>
+			</div>
+            <form action="" method="get">
+    			<div class="appItem">
+                    <span>预约项目</span>         
+                    <div class="chooseItem">
+                        <span>烫发 ></span>
+                        <span>温雅;黄色</span>
+                    </div>
+                </div>
+                <div class="appTechnician">
+                    <span>预约技师</span>         
+                    <span class="chooseTechnician">大文 ></span>
+                </div>
+                <div class="appTime">
+                    <span>预约时间</span>         
+                    <span class="chooseTime">2018.01.01 12:00 ></span>
+                </div>
+                <div class="remarks">
+                    <textarea placeholder="点击填写备注留言..." rows="3" cols="50"></textarea>
+                </div>
+                <div class="coupon">
+                    <span>优惠券</span>
+                    <span class="chooseCoupon">></span>
+                </div>
+                <div class="appPerson">
+                    <span>预约人</span>         
+                    <span class="choosePerson">周可可 ></span>
+                </div>
+                <div class="appTelphone">
+                    <span>预约电话</span>         
+                    <span class="chooseTelphone">13263121201 ></span>
+                </div>
+                <div class="total">
+                    <span>合计</span>
+                    <span>￥100</span>
+                    <button class="payment">支付</button>
+                </div>
+            </form>
+		</div>
+	</div>
+</body>
+</html>
+<script type="text/javascript" src="js/vue.min.js"></script>
+<script type="text/javascript">
+     new Vue({
+        el: '#app',
+        data: {
+            
+        },
+        methods:{
+
+        },
+        mounted(){
+
+        }
+    })
+</script>

@@ -1,0 +1,214 @@
+html,body,.wrapper{
+	font-size: 62.5%;
+	height: 100%;
+	width: 100%;
+	background: #eee;
+}
+.wrapper{
+	font-size: 3.5rem;
+}
+.returnBtn{
+	margin-right: 3rem;
+	font-size: 3.5rem;
+}
+.hairStyle{
+	height: 13rem;
+    background: black;
+    color: #fff;
+    line-height: 16rem;
+}
+.hairStyle h2{
+	display: inline-block;
+	font-size: 4rem;
+    margin-left: 15%;
+    font-weight: normal;
+}
+.carousel,.serviceType{
+	height: 50rem;
+	margin-top: -0.1rem;
+	position: relative;
+	background: #fff;
+}
+.carousel .slide{
+	width: 100%;
+	height: 70%;
+}
+.carousel .slide>li{
+	width: 100%;
+	height: 100%;
+	overflow: hidden;
+}
+.carousel .bullet{
+	width: 40rem;
+	position: absolute;
+    bottom: 15rem;
+    left: 50%;
+    margin-left: -20rem;
+}
+.carousel .bullet span{
+	width: 12rem;
+	height: 1rem;
+	background: #fff;
+	margin-right:1rem;
+}
+.carousel .bullet span.active{
+	background: #a40000;
+}
+.barberInfo{
+	padding: 0.5rem 2rem;
+}
+.barberInfo .title{
+	height: 6rem;
+} 
+.barberName{
+	font-weight: bold;
+	font-size: 3.8rem;
+}
+.contact{
+	float: right;
+}
+.contact i{
+	font-size: 4rem;
+}
+.address div{
+	line-height: 3.2rem;
+	font-size: 2.6rem;
+}
+.serviceType{
+	margin-top:1rem;
+	height: 55rem;
+}
+.stylists li{
+    height: 12rem;
+    border-bottom: 0.1rem solid #eee;
+}
+.stylists .portrait,.stylists div,.stylists .order{
+	display: inline-block;
+	vertical-align: middle;
+}
+.stylists li .portrait{
+	border-radius: 50%;
+	margin: 1rem;
+	width: 10rem;
+	display: inline-block;
+}
+.stylistInfo .post{
+	font-size: 2.5rem;
+	color: #999;
+}
+.order{
+	color: #fff;
+	font-size: 3rem;
+    width: 12rem;
+    height: 5rem;
+    background: #a40000;
+    border: 0 none;
+    border-radius: 0.5rem;
+    float: right;
+    margin: 3rem;
+}
+.serviceName{
+    width: 100%;
+    height: 10rem;
+    text-align: center;
+    border-bottom: .5rem solid #eee;
+}
+.serviceName h3{
+	font-size: 4rem;
+    font-weight: normal;
+    display: inline-block;
+    width: 18rem;
+    height: 10rem;
+    line-height: 10rem;
+}
+.serviceName .current{
+	color: #a40000;
+	border-bottom: 0.5rem solid #a40000;
+}
+.more{
+	text-align: center;
+	border-bottom: 1rem solid #eee;
+}
+.hairPictures{
+	width: 100%;
+	height: 18rem;
+	border-bottom: 0.1rem solid #fff;
+	background: url(../images/bodyBeauty.jpg) no-repeat left center;
+	background-size: cover;
+}
+.wrapper .hairPictures:nth-of-type(2){
+	background: url(../images/partBeauty.jpg) no-repeat left center;
+}
+.wrapper .hairPictures .servicesWrappper{
+	width: 100%;
+	height: 100%;
+	background: rgba(0,0,0,.3);
+}
+.wrapper .hairPictures .services{
+	width: 20rem;
+	height: 100%;
+	color: #fff;
+	text-align: center;
+	margin: 0 auto;
+	padding: 2rem;
+}
+.wrapper .hairPictures .services .price{
+	line-height: 4rem
+}
+.appoint{
+	font-size: 3rem;
+    width: 15rem;
+    height: 4rem;
+    color: #fff;
+    border: 0.6px solid #fff;
+    border-radius: 2rem;
+    background: transparent;
+}
+.examples{
+	height: 30rem;
+	background: #fff;
+	overflow: hidden;
+}
+.examples .line{
+	font-weight: bolder;
+	color: #a40000;
+	font-size: 3rem;
+}
+.examples ul {
+	height: 21rem;
+	width: 208rem;
+}
+.examples ul li{
+	float: left;
+	width: 50rem;
+	height: 20rem;
+	margin:0 1rem;
+}
+.examples ul li img{
+	display: inline-block;
+}
+.examples .recommend{
+	width: 50rem;
+	height: 25rem;
+	border-radius: 2rem;
+}
+.nav{
+	width: 100%;
+    height: 12rem;
+    background: #fff;
+    margin-top: 2rem;
+}
+.nav ul li{
+	float: left;
+    width: 33%;
+    text-align: center;
+}
+.nav i{
+	font-size: 4rem;
+}
+.nav .menu{
+	line-height: 2rem;
+}
+.nav .active{
+	color: #a40000;
+}

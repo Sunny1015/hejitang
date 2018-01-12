@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>首页</title>
+	<link rel="stylesheet" type="text/css" href="css/common.css">
+	<link rel="stylesheet" type="text/css" href="css/iconfont.css">
+	<link rel="stylesheet" type="text/css" href="css/index.css">
+</head>
+<body>
+	<div id="app">
+		<div class="wrapper">
+			<div class="hairStyle">
+				<span class="returnBtn"><返回</span>
+				<span class="returnBtn">关闭</span>
+				<h2>美发服务</h2>
+			</div>
+			<div class="carousel">
+				<ul class="clearfix slide">
+					<li v-for="(item,index) in img" :key="index" v-show="index===mark">
+						<a href="#"><img :src="item.imgSrc" class="recommend"></a>
+					</li>
+				</ul>
+				<div class="bullet">
+					<span v-for="(item,index) in img.length" :class="{'active':index===mark}" @click="change(index)"></span>
+				</div>
+				<div class="barberInfo">
+					<div class="title">
+						<span class="barberName">发型公社</span>
+						<div class="contact">
+							<i class="iconfont icon-iconfontdianhua"></i> |
+							<i class="iconfont icon-dingwei"></i>
+						</div>
+					</div>
+					<div class="address">
+						<div>上海市松江区洞泾镇沈砖公路5025弄</div>
+						<div>营业时间:08:00-20:00</div>
+					</div>
+				</div>
+			</div>
+			<div class="serviceType">
+				<div class="serviceName">
+					<h3 @click="hairServices"><span ref='hairServices' class="current">美发服务</span></h3>
+					<h3 @click="beautyServices"><span ref='beautyServices'>美容服务</span></h3>
+				</div>
+				<ul class="stylists" v-if="stylistsShow">
+					<li v-for="(item,index) in stylists">
+						<img :src="item.imgSrc" class="portrait">
+						<div class="stylistInfo">
+							<p>{{item.name}}</p>
+							<p class="post"><span>{{item.post}} | </span><span>&nbsp;{{item.number}}</span></p>	
+						</div>
+						<button class="order">预约</button>
+					</li>
+				</ul>
+				<ul class="beautylists" v-if="beautyShow">
+					<li v-for="(item,index) in serviceInfo" class="hairPictures">
+						<div class="servicesWrappper">
+							<div class="services">
+								<h3>{{item.serviceName}}</h3>
+								<div class="price">{{item.price}}</div>
+								<button  class="appoint" @click="getAppointment(index)">预约</button>
+							</div>
+						</div>
+					</li>
+				</ul>
+				<div class="more"><a href="#">查看更多</a></div>
+			</div>
+			<div class="examples">
+				<h2><span class="line"> | </span>服务案例</h2>
+				<ul class="clearfix slide">
+					<li v-for="(item,index) in examples" :key="index" v-show="true">
+						<a href="#"><img :src="item" class="recommend"></a>
+					</li>
+				</ul>
+				<div class="bullet">
+					<span v-for="(item,index) in img.length" :class="{'active':index===mark}" @click="change(index)"></span>
+				</div>
+			</div>
+			<div class="nav">
+				<ul class="clearfix">
+					<li v-for="(item,index) in nav" :key="index" :class="{'active':index===navItem}">
+						<a href="#">
+							<i :class="item.iconfont"></i>
+							<div class="menu">{{item.name}}</div>
+						</a>
+					</li>
+				</ul>
+			</div>
+		</div>
+	</div>
+</body>
+</html>
+<script type="text/javascript" src="js/vue.min.js"></script>
+<script type="text/javascript">
+     new Vue({
+        el: '#app',
+        data: {
+        	mark:0,
+        	navItem:0,
+        	timer:null,
+            img: [
+            	{imgSrc:"images/banner1.jpg"},
+            	{imgSrc:"images/banner2.jpg"},
+            	{imgSrc:"images/banner3.jpg"},
+            ],
+            stylists:[
+            	{
+            		name:'刘志坤',
+            		post:'造型总监',
+            		number:'编号12',
+            		imgSrc:'images/portrait1.jpg'
+
+            	},
+            	{
+            		name:'大文',
+            		post:'一级造型师',
+            		number:'编号13',
+            		imgSrc:'images/portrait2.jpg'
+            	},
+            	{
+            		name:'大文2',
+            		post:'二级造型师',
+            		number:'编号13',
+            		imgSrc:'images/portrait3.jpg'
+            	}
+            ],
+            serviceInfo:[
+            	{serviceName:'剪发服务',price:'￥100'},
+            	{serviceName:'美发服务',price:'￥100'}
+            ],
+            nav:[
+            	{name:'首页',iconfont:'iconfont icon-shouye1'},
+            	{name:'我的订单',iconfont:'iconfont icon-shangchengicon13'},
+            	{name:'个人中心',iconfont:'iconfont icon-gerenzhongxinxia'},
+            ],
+            examples:["images/hairExample1.jpg","images/hairExample2.jpg","images/hairExample3.jpg","images/hairExample4.jpg"],
+            current:true,
+            stylistsShow:true,
+            beautyShow:false,
+           
+        },
+        methods:{
+        	change(i){
+        		this.mark = i
+        	},
+        	autoplay(){
+        		this.mark++
+        		if(this.mark === 3){
+        			this.mark = 0
+        			return
+        		}
+        	},
+        	play(){
+        		setInterval(this.autoplay,3000)
+        	},
+        	hairServices(){
+        		console.log(this.$refs.hairServices)
+        		this.$refs.hairServices.className="current";
+        		this.$refs.beautyServices.className="";
+        		this.stylistsShow = true;
+        		this.beautyShow = false
+        	},
+        	beautyServices(){
+        		this.$refs.beautyServices.className="current";
+        		this.$refs.hairServices.className="";
+        		this.beautyShow = true;
+        		this.stylistsShow = false
+        	},
+			getAppointment(index){
+				console.log(index)
+			}
+        },
+        created(){
+        	this.play()
+        }
+    })
+</script>

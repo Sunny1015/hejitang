@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>造型师</title>
+	<link rel="stylesheet" type="text/css" href="css/common.css">
+	<link rel="stylesheet" type="text/css" href="css/stylist.css">
+</head>
+<body>
+	<div id="app">
+		<div class="wrapper">
+			<div class="hairStyle">
+				<span class="returnBtn"><返回</span>
+				<span class="returnBtn">关闭</span>
+				<h2>造型师</h2>
+			</div>
+			
+			<ul class="stylists">
+				<li v-for="(item,index) in stylists">
+					<img :src="item.imgSrc" class="portrait">
+					<div class="stylistInfo">
+						<p>{{item.name}}</p>
+						<p class="post"><span>{{item.post}} | </span><span>&nbsp;{{item.number}}</span></p>	
+					</div>
+					<button class="order">预约</button>
+				</li>
+			</ul>
+		</div>
+	</div>
+</body>
+</html>
+<script type="text/javascript" src="js/vue.min.js"></script>
+<script type="text/javascript">
+     new Vue({
+        el: '#app',
+        data: {
+            stylists:[
+            	{
+            		name:'刘志坤',
+            		post:'造型总监',
+            		number:'编号12',
+            		imgSrc:'images/portrait1.jpg'
+
+            	},
+            	{
+            		name:'大文',
+            		post:'一级造型师',
+            		number:'编号13',
+            		imgSrc:'images/portrait2.jpg'
+            	},
+            	{
+            		name:'大文2',
+            		post:'二级造型师',
+            		number:'编号13',
+            		imgSrc:'images/portrait3.jpg'
+            	},
+            	{
+            		name:'刘志坤',
+            		post:'造型总监',
+            		number:'编号12',
+            		imgSrc:'images/portrait1.jpg'
+
+            	},
+            	{
+            		name:'大文',
+            		post:'一级造型师',
+            		number:'编号13',
+            		imgSrc:'images/portrait2.jpg'
+            	},
+            	{
+            		name:'大文2',
+            		post:'二级造型师',
+            		number:'编号13',
+            		imgSrc:'images/portrait3.jpg'
+            	}
+            ]
+        },
+        methods:{
+
+        },
+        mounted(){
+
+        }
+    })
+</script>

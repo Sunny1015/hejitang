@@ -1,0 +1,65 @@
+ html,body,.wrapper{
+    font-size: 62.5%;
+    height: 100%;
+    width: 100%;
+    background: #eee;
+}
+.wrapper{
+    font-size: 3.5rem;
+}
+.hairStyle{
+    height: 13rem;
+    background: black;
+    color: #fff;
+    line-height: 16rem;
+}
+.hairStyle h2{
+    display: inline-block;
+    font-size: 4rem;
+    margin-left: 15%;
+    font-weight: normal;
+}
+.returnBtn{
+    margin-right: 3rem;
+    font-size: 3.5rem;
+}
+.appItem,.appTechnician,.appTime,.remarks,.coupon,.appPerson,.appTelphone,.total{
+    height: 10rem;
+    line-height: 10rem;
+    background: #fff;
+    margin-bottom: 0.2rem;
+    padding: 2rem;
+}
+.appTechnician,.appTime,.coupon,.appPerson,.appTelphone{
+    height: 6rem;
+    line-height: 6rem;
+}
+.remarks textarea{
+    border: 1px solid #eee;
+}
+.coupon{
+    margin:1rem 0; 
+}
+.chooseItem,.chooseTechnician,.chooseTime,.chooseCoupon,.choosePerson,.chooseTelphone{
+    float: right;
+}
+.chooseItem span{
+    display: block;
+    line-height: 5rem;
+}
+.total{
+    width: 100%;
+    height: 10rem;
+    position: absolute;
+    bottom: -36px;
+    left: 0;
+    padding: 0;
+    padding-left: 2rem;
+}
+.total .payment{
+    width: 20rem;
+    height: 100%;
+    background: #a40000;
+    color: #fff;
+    float: right;
+}

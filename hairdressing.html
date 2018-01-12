@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>美发服务</title>
+	<link rel="stylesheet" type="text/css" href="css/common.css">
+	<link rel="stylesheet" type="text/css" href="css/hairdressing.css">
+</head>
+<body>
+	<div id="app">
+		<div class="wrapper">
+			<div class="cutHair">
+				<span class="returnBtn"><返回</span>
+				<span class="returnBtn">关闭</span>
+				<h2>美发服务</h2>
+			</div>
+			<img src="images/cutHairService.jpg" class="cutHairService">
+			<div class="hairColorWrapper">
+				<div class="hairColorService">
+					<div class="hairDye">
+						<h3>染发膏</h3>
+						<ul class="hairDyeList">
+							<li v-for="(item,index) in hairDyeList" :class="i==index?'current':''" @click="addDyeClass(index)">{{item}}</li>
+						</ul>
+					</div>
+					<div class="hairColor">
+						<h3>染发颜色</h3>
+						<ul class="hairColorList">
+							<li v-for="(item,index) in hairColorList" :class="j==index?'current':''" @click="addColorClass(index)">{{item}}</li>
+						</ul>
+					</div>
+					<button class="btn">完成</button>
+				</div>
+			</div>
+		</div>
+	</div>
+</body>
+</html>
+<script type="text/javascript" src="js/vue.min.js"></script>
+<script type="text/javascript">
+     new Vue({
+        el: '#app',
+        data: {
+        	i:1,
+        	j:3,
+            hairDyeList:['欧莱雅','温雅','施华蔻','其他'],
+            hairColorList:['红色','蓝色','绿色','黄色','紫色','其他']
+        },
+        methods:{
+			addDyeClass(index){
+				this.i = index
+			},
+			addColorClass (index){
+				this.j = index
+			}
+        }
+    })
+</script>
